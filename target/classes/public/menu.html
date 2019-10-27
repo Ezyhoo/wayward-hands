@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="author" content = "Yizhi Hu">
+    <meta name="viewport" content="" width="device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "styles.css">
+</head>
+<body>
+<h1>Wayward Hands</h1>
+<!-- Load the img in html so that it can show in the page-->
+<img style="display: none" src="images/WHMenu.png" alt="Wayward Hands">
+<img style="display: none" src="images/tableBG.png" alt="Table">
+<img style="display: none" src="images/cardImages/cardBack.png" alt="cardBack">
+
+<button class="start-btn" id="start-btn">Start Wayward Hands</button>
+<div class = "container">
+    <button class="back-btn" id="back-btn" style="top: 20%; left: 15%"><span> Back</span></button>
+    <button class="menu-btn" id="start-game-btn" style="top: 65%; left: 15%">Start Game</button>
+    <button class="menu-btn" id="setting-btn" style="top: 73%; left: 14.5%">Game Setting</button>
+    <fieldset class="cash-info" id="my-info" style="top: 35em; left: 39em">
+        <legend>Player1</legend>
+        Current bet: <p style="display: inline" id="my-current-bet">0</p><br><br>
+        Total cash: <p style="display: inline" id="my-total-cash">0</p>
+    </fieldset>
+
+    <fieldset class="cash-info" id="AI1-info" style="top: 29em; left: 68em">
+        <legend>AI1</legend>
+        Current bet: <p style="display: inline" id="AI1-current-bet">0</p><br><br>
+        Total cash: <p style="display: inline" id="AI1-total-cash">0</p>
+    </fieldset>
+
+    <fieldset class="cash-info" id="AI2-info" style="top: 20em; left: 68em">
+        <legend>AI2</legend>
+        Current bet: <p style="display: inline" id="AI2-current-bet">0</p><br><br>
+        Total cash: <p style="display: inline" id="AI2-total-cash">0</p>
+    </fieldset>
+
+    <fieldset class="cash-info" id="AI3-info" style="top: 7em; left: 34em">
+        <legend>AI3</legend>
+        Current bet: <p style="display: inline" id="AI3-current-bet">0</p><br><br>
+        Total cash: <p style="display: inline" id="AI3-total-cash">0</p>
+    </fieldset>
+
+    <fieldset class="cash-info" id="AI4-info" style="top: 20em; left: 17em">
+        <legend>AI4</legend>
+        Current bet: <p style="display: inline" id="AI4-current-bet">0</p><br><br>
+        Total cash: <p style="display: inline" id="AI4-total-cash">0</p>
+    </fieldset>
+
+    <fieldset class="cash-info" id="AI5-info" style="top: 29em; left: 17em">
+        <legend>AI5</legend>
+        Current bet: <p style="display: inline" id="AI5-current-bet">0</p><br><br>
+        Total cash: <p style="display: inline" id="AI5-total-cash">0</p>
+    </fieldset>
+
+    <p class="game-info" id="game-info" style="left: 5%">Total bet: <p id="total-bet"></p></p>
+    <input class = "input" id = "raise-input" type="number" ></input>
+    <button class="game-btn" id="raise-btn" style="top: 33em; left: 54em">Raise</button>
+    <button class="game-btn" id="fold-btn" style=" top: 35.5em; left: 54em">Fold</button>
+    <button class="game-btn" id="call-btn" style=" top: 38em; left: 54em">Call</button>
+    <button class="game-btn" id="all-in-btn" style=" top: 40.5em; left: 54em">All In</button>
+    <button class="game-btn" id="check-btn" style="top: 43em; left:54em">Check</button>
+    <canvas id="myCanvas" width="1352px"  height="676px" style="display:none;"></canvas>
+
+    <img src="images/cardImages/cardBack.png" alt="card" id="playerCard1" style="left: 600px; top: 575px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="playerCard2" style="left: 675px; top: 575px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI1Card1" style="left: 1000px; top: 475px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI1Card2" style="left: 1075px; top: 475px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI2Card1" style="left: 1000px; top: 100px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI2Card2" style="left: 1075px; top: 100px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI3Card1" style="left: 600px; top: 0px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI3Card2" style="left: 675px; top: 0px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI4Card1" style="left: 200px; top: 100px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI4Card2" style="left: 275px; top: 100px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI5Card1" style="left: 200px; top: 475px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="AI5Card2" style="left: 275px; top: 475px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="poolCard1" style="left: 475px; top: 275px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="poolCard2" style="left: 550px; top: 275px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="poolCard3" style="left: 625px; top: 275px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="poolCard4" style="left: 700px; top: 275px; width: 70px; height: 100px; display: none"/>
+    <img src="images/cardImages/cardBack.png" alt="card" id="poolCard5" style="left: 775px; top: 275px; width: 70px; height: 100px; display: none"/>
+
+</div>
+
+<h2>Terminologies and rules</h2>
+<pre>
+    <h3>Blinds:</h3>
+    Before the cards are dealt, forced bets, called the "Big Blind (BB)" and the "Small Blind (SB)" are made.
+    The Small Blind position is always the seat to the left of the Dealer, and the Big Blind is the seat to the left of the Small Blind.
+    The amounts of the blinds are predetermined, and the Small Blind is usually half the Big Blind.
+
+    <h3>Shuffle and Deal:</h3>
+    The deck is shuffled and the dealer deals two cards face down to each player, one card at a time.
+    Starting with the player on the left (Small Blind position, then continues in a clockwise manner). These cards are your Hole Cards or Pocket Cards.
+
+    <h3>PreFlop:</h3>
+    Once the cards are dealt, each player looks at their cards.
+
+    <h3>The Pot:</h3>
+    The pot is the sum of money that players bet during each hand. After each betting round, all bets go into the pot until the Showdown.
+
+    <h3>Acting:</h3>
+    Each player, when it's their turn, makes their choice and Acts. There are five acts that can be played:
+    1) <b>Check- </b>betting zero. Players may not check on the opening round because they must either match (or raise) the big blind or fold.
+    2) <b>Raise- </b>to increase the size of the current bet.
+    3) <b>Call- </b>to match a bet or a raise.
+    4) <b>Fold- </b>to discard your hand and forfeit the current pot.
+    5) <b>All_In- </b>to bet all the money the player has
+
+    <h3>Hand Rankings: </h3>
+    A hand always consist of five cards. Individual cards are "ranked" as follows (high-to-low): A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2. ACE can be low, but only when part of an A-2-3-4-5 straight.
+    Suits (Club, Diamond, Heart, Spade) have no value, so if two players have hands that are identical except for suit, then they are tied.
+    A "Kicker" card is a high card used to break ties between hands of the same rank (ex. 2 players with \"Four of a Kind\", 3 K's on the board. P1 has K, 9 and P2 has K, 6. P1 with K, 9 wins with the "9 Kicker".
+
+
+    <b>Here are the "Rank of Hands" in the order of Strength with Probability of being dealt.</b>
+
+    <b>Royal Flush-</b> A, K, Q, J, 10, all in the same suit. 1 in 650,000
+
+    <b>Straight Flush- </b>Five cards in sequence, all of the same suit. 1in 65,000
+
+    <b>Four of a Kind- </b>Four cards of one rank. Kicker breaks ties. 1 in 4,000
+
+    <b>Full House-</b> Three matching cards of one rank, plus Two matching cards of another rank.
+    Higher ranking set of three wins. If two players have the same set of three, the player with the higher pair wins. 1 in 700
+
+    <b>Flush-</b> Five cards of the same suit. High card wins. 1 in 500
+
+    <b>Straight- </b>Five cards of sequential rank, but different suit. High card wins. 1 in 250
+
+    <b>Three of a kind- </b>Three cards of the same rank, plus two unmatched cards. High set wins. 1 in 50
+
+    <b>Two Pair-</b> Two cards of the same rank, plus Two cards of another rank. High pair wins. 1 in 20
+
+</pre>
+                          
+</body> 
+
+<script src = "js/menu.js"></script>
+<script src = "js/jquery-3.4.1.min.js"></script> 
