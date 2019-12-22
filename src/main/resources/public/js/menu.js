@@ -44,6 +44,25 @@ var myCanvas = {
         $("#AI3-info").hide();
         $("#AI4-info").hide();
         $("#AI5-info").hide();
+
+        $("#playerCard1").hide();
+        $("#playerCard2").hide();
+        $("#AI1Card1").hide();
+        $("#AI1Card2").hide();
+        $("#AI2Card1").hide();
+        $("#AI2Card2").hide();
+        $("#AI3Card1").hide();
+        $("#AI3Card2").hide();
+        $("#AI4Card1").hide();
+        $("#AI4Card2").hide();
+        $("#AI5Card1").hide();
+        $("#AI5Card2").hide();
+        $("#poolCard1").hide();
+        $("#poolCard2").hide();
+        $("#poolCard3").hide();
+        $("#poolCard4").hide();
+        $("#poolCard5").hide();
+
         $("#raise-input").hide();
         $("#raise-btn").hide();
         $("#fold-btn").hide();

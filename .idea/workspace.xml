@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab22d716-49e7-410b-a391-d79718e8218b" name="Default Changelist" comment="" />
+    <list default="true" id="ab22d716-49e7-410b-a391-d79718e8218b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/js/menu.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -25,6 +36,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1Ra3zZyXTqfCzP7gn6MRI3369fX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -114,7 +126,8 @@
       <workItem from="1569938330186" duration="3269000" />
       <workItem from="1569942215549" duration="141000" />
       <workItem from="1569942508500" duration="29325000" />
-      <workItem from="1572120330885" duration="12954000" />
+      <workItem from="1572120330885" duration="13808000" />
+      <workItem from="1576991440847" duration="250000" />
     </task>
     <servers />
   </component>
@@ -124,6 +137,19 @@
       <list>
         <option value="$PROJECT_DIR$/../Web Design/practice/ts-hello/main.js" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
 </project>

@@ -17,19 +17,19 @@ public class Controller {
             return gson.toJson(dis.getSetUpInfo());
         });
 
-        get("/raise", (request, response) -> {
+        put("/raise", (request, response) -> {
             return "";
         });
 
-        get("/call", (request, response) -> {
+        put("/call", (request, response) -> {
             return "";
         });
 
-        get("/fold", (request, response) -> {
+        put("/fold", (request, response) -> {
             return "";
         });
 
-        get("/allIn", (request, response) -> {
+        put("/allIn", (request, response) -> {
             return "";
         });
 
